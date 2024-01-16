@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OGW</title>
+    <link rel="icon" href="./Black Red Simple Gaming Logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+            transition: 0.4s;
+        }
+        header nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        header img{
+            width: 100px;
+        }
+        header {
+            background: #222831;
+        }
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+        header nav ul li a{
+           margin: 20px;
+           color: #EEEEEE;
+           text-decoration: none;
+        }
+        header nav ul li a:hover {
+            color: #F5841A;
+        }
+        .box {
+  --clr-shadow__border: #F5841A;
+  --clr-text: #F6F4EB;
+  --clr-space: #120e1e;
+  --clr-space-gr: #BB0029;
+  --clr-star: #E9F8F9;
+  --size: 3rem;
+  z-index: 999;
+  position: relative;
+  outline: 1px solid var(--clr-shadow__border);
+}
+
+.button {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  background: transparent;
+  padding: calc(var(--size) / 3) var(--size);
+  border: none;
+  cursor: pointer;
+  color: var(--clr-text);
+  text-shadow: 2px 0px var(--clr-shadow__border), 0px 2px var(--clr-shadow__border),
+  -2px 0px var(--clr-shadow__border), 0px -2px var(--clr-shadow__border);
+}
+
+.space {
+  width: 100%;
+  height: 100%;
+  bottom: 0%;
+  gap: 1.5rem;
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  background: linear-gradient( 160deg, var(--clr-space), var(--clr-space-gr));
+}
+
+.box:hover .space {
+  opacity: 1;
+}
+
+.star {
+  height: 4rem;
+  width: 0.3rem;
+  transition: 0.5s;
+  border-radius: 50px;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  position: relative;
+  background-color: var(--clr-star);
+  animation: space-animation calc(0.1s * var(--i)) linear infinite;
+}
+
+@keyframes space-animation {
+  0% {
+    transform: rotate(-30deg) translateY(calc(-52% * var(--i)));
+  }
+
+  100% {
+    transform: rotate(-30deg) translateY(calc(52% * var(--i)));
+  }
+}
+.section-one {
+    display: flex;
+    align-items: center;
+    height: 87vh;
+    flex-direction: column;
+    background-image: url(./893245.jpg);
+    background-size: cover;
+    justify-content: center;
+}
+.section-one span {
+    display: flex;
+    align-items: center;
+    height: 87vh;
+    background: #000000aa;
+    flex-direction: column;
+    background-size: cover;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+}
+.section-one h1 , .section-one h4 {
+    color: white;
+    text-shadow: 2px 0px #F5841A, 0px 2px #F5841A,
+  -2px 0px #F5841A, 0px -2px #F5841A;
+}
+.section-one h1 {
+    font-size: 30px;
+}
+.section-one h4 {
+    font-size: 25px;
+}
+.section-two {
+    background: #120e1e;
+    height: 87vh;
+}
+.section-two:hover .section-two h1 {
+    color: #eeeeee;
+}
+.section-two:hover .section-two h2 {
+    color: #eeeeee51;
+}
+.section-two h1 {
+    color: #eeeeee51;
+}
+.section-two h2 {
+    color: #eeeeee;
+}
+.text-l {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-l h1{
+    font-family: 'Rubik Broken Fax', system-ui;
+}
+.text-l h2 {
+    position: absolute;
+    padding-top: 10px;
+}
+.con {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 40%;
+    top: 18%;
+    background: #222831;
+    padding: 30px;
+    color: #EEEEEE;
+    gap: 50px;
+    z-index: 1000;
+    border-radius: 20px;
+    
+}
+.button2 {
+  width: 150px;
+  padding: 0;
+  border: none;
+  transform: rotate(5deg);
+  transform-origin: center;
+  font-family: "Gochi Hand", cursive;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #494a4b;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #F5841A;
+}
+
+.button2 span {
+  background: #f1f5f8;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid #494a4b;
+}
+
+.button2:active {
+  transform: translateY(5px);
+  padding-bottom: 0px;
+  outline: 0;
+}
+@media (max-width : 550px) {
+    nav {
+        flex-direction: column;
+    }
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    li {
+        margin-top: 20px;
+    }
+}
+</style>
+</head>
+<body>
+    <div id="ad" class="con">
+        <h1>
+        CONTACT
+        </h1>
+        <h4>
+            Discord Name
+        </h4>
+            <p>YouseF (OWNER): .heisenberg.8923</p>
+            <p>Qusey (OWNER): quseyhammad_03975 </p>
+            <button id="add" class="button2">
+                <span>CLOSE</span>
+              </button>
+              
+    </div>
+    <div id="mem" class="con">
+        <h1>
+        BEST MEMBER
+        </h1>
+        <h4>
+            Discord Name
+        </h4>
+            <p>Mohammad (ADMIN): mohammad_alaa9</p>
+            <p>Ahmad (ADMIN): ahmadfaoury </p>
+            <p>Mousa (ADMIN): mousa_1m </p>
+            <button id="adddd" class="button2">
+                <span>CLOSE</span>
+              </button>
+    </div>
+    <span id="a">
+        <header>
+            <nav>
+                <img src="./Black Red Simple Gaming Logo.png" alt="LOGO">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="https://discord.gg/sjmef8mksp">LINK SERVER</a></li>
+                    <li><a id="btn-contact" href="#">CONTACT</a></li>
+                    <li><a id="btn-memeber" href="#">MEMBER</a></li>
+                </ul>
+            </nav>
+        </header>
+       
+        
+        <span>
+    
+            <section class="section-one">
+                <span>
+                    <h1>
+                        Best Games
+                    </h1>
+                    <h4>
+                        You can find it in the link of this server
+                    </h4>
+                    <div class="box">
+                        <a href="https://discord.gg/sjmef8mksp" class="button">JOIN</button>
+                        <div class="space">
+                          <span style="--i: 31" class="star"></span>
+                          <span style="--i: 12" class="star"></span>
+                          <span style="--i: 57" class="star"></span>
+                          <span style="--i: 93" class="star"></span>
+                          <span style="--i: 23" class="star"></span>
+                          <span style="--i: 70" class="star"></span>
+                          <span style="--i: 6" class="star"></span>
+                        </div>
+                      </div>
+                </span>
+            </section>
+        </span>
+    </span>
+   
+
+       
+    <script>
+        const btnContact = document.getElementById('btn-contact');
+        const btnMemeber = document.getElementById('btn-memeber');
+        const mem = document.getElementById('mem');
+        const ad = document.getElementById('ad');
+        const a = document.getElementById('a');
+        const addd = document.getElementById('add')
+        const adddd = document.getElementById('adddd');
+        btnContact.addEventListener('click',()=>{
+            ad.style.display = "flex"
+            a.style.filter = "blur(20px)"
+        })
+        addd.addEventListener('click' , ()=>{
+            ad.style.display = "none"
+            a.style.filter = "blur(0px)"
+        })
+        btnMemeber.addEventListener('click',()=>{
+            mem.style.display = "flex"
+            a.style.filter = "blur(20px)"
+        })
+        adddd.addEventListener('click' , ()=>{
+            mem.style.display = "none"
+            a.style.filter = "blur(0px)"
+        })
+    </script>
+</body>
+</html>
